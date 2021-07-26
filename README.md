@@ -7,16 +7,16 @@ This sample runs inside of a Docker container with Python 3.7 preconfigured usin
 * SendGrid account & domain configured
 * SendGrid API Key with Send Email permission
 
-## Adding SendGrid to Azure
-https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
+## Setting Up SendGrid for Azure
+https://docs.sendgrid.com/for-developers/partners/microsoft-azure-2021
 
-### Azure Functions
+## Azure Functions
 https://docs.microsoft.com/en-us/azure/azure-functions/
 
 Note: Azure Functions current supports Python 3.6, 3.7, and 3.8.  
 Reference: https://pypi.org/project/azure-functions/
 
-### SendGrid Python
+## SendGrid Python SDK
 https://github.com/sendgrid/sendgrid-python
 
 ## Environment Configuration
