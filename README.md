@@ -20,10 +20,17 @@ Reference: https://pypi.org/project/azure-functions/
 https://github.com/sendgrid/sendgrid-python
 
 ## Environment Configuration
-Create a `.env` file inside of the `.devcontainers` that looks like:
-```
-SENDGRID_API_KEY=SG.yourapikey
-EMAIL_FROM=no-reply@yourdomain.com
+Create or edit `local.settings.json` in the project root folder to look like:
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "SENDGRID_API_KEY": "SG.yourapikey",
+    "EMAIL_FROM": "demo-no-reply@yourdomain.demo"
+  }
+}
 ```
 
 ## Running the Sample
@@ -38,6 +45,6 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-pytho
 ## Deploying to Azure
 From VS Code, open the Azure extension, select Local Project, and click the "Deploy to Function App" button in the "Functions" section header.
 
-Once deployed, be sure to go into the portal and under the function's Configuration menu, add the `SENDGRID_API_KEY` and `EMAIL_FROM` values.
+Once deployed, be sure to go into the portal and under the function's Configuration menu, add the `SENDGRID_API_KEY` and `EMAIL_FROM` values. Alternatively, you can use the "Azure Functions: Upload Local Settings" function from within VS Code to push the local settings to the Azure Function app.
 
 Reference: https://docs.microsoft.com/en-us/azure/developer/javascript/tutorial/vscode-function-app-http-trigger/tutorial-vscode-serverless-node-deploy-hosting
