@@ -34,7 +34,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     #logging.info(f"Sendgrid response body: {response.body}")
     #logging.info(f"Sendgrid response headers: {response.headers}")
 
-    return func.HttpResponse(f"Email sent to {escape(to)} with subject {escape(subject)}.", status_code=200)
+    return func.HttpResponse(f"Email sent to {escape(to)} with subject {escape(subject)}. Sendgrid response code: {response.status_code}.", status_code=200)
 
 def get_param(req: func.HttpRequest, param: str) -> str:
     # Check for querystring parameter (GET)
